@@ -1,0 +1,69 @@
+#blog article {
+	background-color: #fff;
+	margin-bottom: 30px;
+}
+#blog article .thumbnail i {
+	color: #fff;
+	background-color: #000;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	padding-right: 5px;
+	padding-left: 5px;
+	position: relative;
+	top: -10px;
+}
+#blog article header {
+	text-align: center;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#blog article .category {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+#blog article .category a {
+	color: #555;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+#blog article h1.title {
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+#blog article h1.title a {
+	color: #000;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+#blog article .meta {
+	text-transform: uppercase;
+	color: #333;
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+#blog article .cotent {
+	margin-top: 15px;
+	font-size: 12px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#blog article footer {
+	border-top: solid 1px #f7f7f7;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#blog article footer a {
+	font-size: 12px;
+	color: #555;
+}
+#posts-nav {
+	text-align: center;
+	color: #222;
+}
+#posts-nav a {
+	font-size: 14px;
+	color: #222;
+}

@@ -1,0 +1,71 @@
+#main-menu {
+	background: #222222;
+}
+#main-menu .menu .dropdown-toggle::after {
+	display: none;
+}
+#main-menu .menu .btn-secondary {
+	color: #e8eaea;
+	background-color: #222;
+	border-color: #222;
+	border-left: solid 1px #2e303c;
+	border-right: solid 1px #2e303c;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-radius: 0px;
+}
+#main-menu .follow-me a {
+	color: #e8eaea;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+}
+#main-menu .follow-me .nav-item:first-of-type {
+	border-left: solid 1px #2e303c;
+}
+#main-menu .follow-me .nav-item {
+	border-right: solid 1px #2e303c;
+}
+#main-menu .follow-me .nav-link {
+	display: block;
+	padding: 1rem 1.2rem;
+}
+#main-menu .logo {
+	padding-top: 0px;
+}
+#main-menu .logo a {
+	color: #e6e8e8;
+	font-size: 28px;
+}
+#main-menu .logo .oflash {
+	font-weight: 900;
+}
+#main-menu .logo .latinoamerica {
+	font-weight: 400;
+}
+#header .header {
+	background-color: #e6e6e6;
+}
+#header .subscribe {
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#header .subscribe .form-control-plaintext {
+	font-size: 12px;
+	color: #212121;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+#header .subscribe .form-control {
+	border-radius: 0px;
+	border: none;
+	font-size: 12px;
+}
+#header .subscribe .btn-suscribe {
+	font-size: 12px;
+    color: #fff;
+    background-color: #212121;
+    border-color: #212121;
+    border-radius: 0px;
+}

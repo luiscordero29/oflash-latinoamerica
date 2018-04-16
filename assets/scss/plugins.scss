@@ -1,0 +1,36 @@
+#single-nav .wp-post-navigation div {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 50%;
+	flex: 0 0 50%;
+	max-width: 50%;
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+	background-color: #000;
+	width: 49.5%;
+	height: 100px;
+	color: #fff;
+	padding-top: 40px;
+}
+#single-nav .wp-post-navigation div a {
+	color: #fff;
+	font-size: 14px;
+}
+#single-nav .wp-post-navigation div.wp-post-navigation-pre a {
+	margin-left: 15px;
+}
+#single-nav .wp-post-navigation div.wp-post-navigation-next a {
+	margin-right: 15px;
+}
+#single-nav .wp-post-navigation div a::after {
+	position: absolute;
+	color: #fff;
+	font-size: 30px;
+	margin-top: 2px;
+	height: 22px;
+	line-height: 22px;
+	top: 34%;
+	padding-left: 5px;
+	padding-right: 5px;
+}
