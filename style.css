@@ -284,6 +284,22 @@ body#blog {
   color: #fff;
   margin-top: 30px; }
 
+#footer .box > h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900px; }
+
+#footer .box > .content {
+  font-size: 12px;
+  margin-top: 15px;
+  line-height: 25px; }
+
+#footer .box > .content a {
+  color: #fff; }
+
+#footer .box > .content .tweet-details {
+  display: none; }
+
 #copyright {
   background-color: #191c1e;
   color: #737576;

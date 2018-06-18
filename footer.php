@@ -1,25 +1,67 @@
 <footer>
-    <?php if ( is_active_sidebar( 'widget-footer' ) ): ?> 
-	<section id="footer">
-		<div class="container">
-			<div class="row">
-                <?php dynamic_sidebar( 'widget-footer' ); ?>
-			</div>
-		</div>		
-	</section>
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="box">
+                        <h3>
+                            Últimos one to one
+                        </h3>
+                        <div class="content">
+                            <?php 
+                                $args = 
+                                    array(
+                                        'post_type' => 'post', 
+                                        'numberposts' => 1, 
+                                        'orderby' => 'date', 
+                                        'order' => 'DESC',
+                                        'post_status' => 'publish',
+                                        'category' => '23',
+                                    );
+                                $posts = get_posts( $args );
+                                foreach ($posts as $post):
+                                    the_excerpt($post->ID);
+                            ?>
+                                
+                            <?php if (has_post_thumbnail($post->ID)): ?>
+                                <img src="<?php the_post_thumbnail_url( $post->ID, 'large' ); ?>" class="img-fluid" alt="<?php echo get_the_title($post->ID); ?>">
+                            <?php endif ?>
+
+                            <?php 
+                                endforeach;
+                            ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box">
+                        <?php dynamic_sidebar( 'widget-footer-twitter' ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php if ( is_active_sidebar( 'widget-footer' ) ): ?>
+  	<section id="footer">
+  		<div class="container">
+  			<div class="row">
+                  <?php dynamic_sidebar( 'widget-footer' ); ?>
+  			</div>
+  		</div>
+  	</section>
     <?php endif ?>
-    <?php if ( is_active_sidebar( 'widget-copyright' ) ): ?> 
-	<section id="copyright">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<center>
-						<?php dynamic_sidebar( 'widget-copyright' ); ?>
-					</center>
-				</div>
-			</div>
-		</div>
-	</section>
+      <?php if ( is_active_sidebar( 'widget-copyright' ) ): ?>
+  	<section id="copyright">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col">
+  					<center>
+  						<?php dynamic_sidebar( 'widget-copyright' ); ?>
+  					</center>
+  				</div>
+  			</div>
+  		</div>
+  	</section>
     <?php endif ?>
 </footer>
 
