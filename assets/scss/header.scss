@@ -43,6 +43,22 @@
 #main-menu .logo .latinoamerica {
 	font-weight: 400;
 }
+#main-menu div.dropdown-menu {
+    margin: 0px 0px 0px 0px;
+    border-radius: 0px;
+    background-color: rgba(255,255,255,.8);
+    min-width: 769px;
+    padding: 0px 0px 0px 0px;
+}
+#main-menu div.dropdown-menu a.nav-link {
+	color: #000;
+	font-size: 14px;
+}
+#main-menu div.dropdown-menu a.nav-link.active {
+	color: #fff;
+	background-color: #404348;
+	font-size: 14px;
+}
 #header .header {
 	background-color: #e6e6e6;
 }

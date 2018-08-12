@@ -24,6 +24,23 @@
 #footer .box > .content .tweet-details {
 	display: none;
 }
+#footer .box > .content .latest-tweets ul {
+	list-style: none;
+	padding: 0px;
+}
+#footer .box > .content .latest-tweets ul li  {
+	background-image: url('assets/images/white-twitter-16.png');
+	background-repeat: no-repeat;
+	background-position: left 5px;
+	padding-left: 25px;
+}
+#footer .box > .content #sbi_load {
+	display: none;
+}
+#footer .box > .content .cff-post-text {
+	font-size: 12px !important;
+	line-height: 25px !important;
+}
 #copyright {
 	background-color: #191c1e;
 	color: #737576;

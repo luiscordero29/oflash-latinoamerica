@@ -33,24 +33,31 @@
                         </div>
                     </div>
                 </div>
+                <?php if ( is_active_sidebar( 'widget-footer-twitter' ) ): ?>
                 <div class="col">
                     <div class="box">
                         <?php dynamic_sidebar( 'widget-footer-twitter' ); ?>
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php if ( is_active_sidebar( 'widget-footer-instagram' ) ): ?>  
+                <div class="col">
+                    <div class="box">
+                        <?php dynamic_sidebar( 'widget-footer-instagram' ); ?>
+                    </div>
+                </div>
+                <?php endif; ?>
+                <?php if ( is_active_sidebar( 'widget-footer-facebook' ) ): ?>  
+                <div class="col">
+                    <div class="box">
+                        <?php dynamic_sidebar( 'widget-footer-facebook' ); ?>
+                    </div>
+                </div>
+                <?php endif; ?>
             </div>
         </div>
     </section>
-    <?php if ( is_active_sidebar( 'widget-footer' ) ): ?>
-  	<section id="footer">
-  		<div class="container">
-  			<div class="row">
-                  <?php dynamic_sidebar( 'widget-footer' ); ?>
-  			</div>
-  		</div>
-  	</section>
-    <?php endif ?>
-      <?php if ( is_active_sidebar( 'widget-copyright' ) ): ?>
+    <?php if ( is_active_sidebar( 'widget-copyright' ) ): ?>
   	<section id="copyright">
   		<div class="container">
   			<div class="row">

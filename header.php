@@ -25,11 +25,33 @@
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-bars fa-2x"></i>
                                 </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                              </div>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <?php 
+                                        $menu_name = 'main'; 
+                                        if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+                                            $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+                                         
+                                            $menu_items = wp_get_nav_menu_items($menu->term_id);
+                                            
+                                            $this_item = current( wp_filter_object_list( $menu_items, array( 'object_id' => get_queried_object_id() ) ) );
+
+                                            $menu_list = '<nav class="nav">';
+                                         
+                                            foreach ( (array) $menu_items as $key => $menu_item ) {
+                                                if (get_queried_object_id() != $menu_item->object_id) {
+                                                    $menu_list .= '<a class="nav-link" href="' . $menu_item->url . '">' . $menu_item->title . '</a>';
+                                                }else{
+                                                    $menu_list .= '<a class="nav-link active" href="' . $menu_item->url . '">' . $menu_item->title . '</a>';
+                                                }
+                                            }
+                                            $menu_list .= '</nav>';
+                                        } else {
+                                            $menu_list = '<nav class="nav"><a class="nav-link disabled">Menu "' . $menu_name . '" not defined.</a></nav>';
+                                        }
+                                        echo $menu_list;
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -44,22 +66,22 @@
                         <div class="follow-me">
                             <ul class="nav justify-content-end">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#">
+                                    <a class="nav-link active" href="http://www.instagram.com/oflash_la" target="_black">
                                         <i class="fab fa-instagram"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#">
+                                    <a class="nav-link active" href="http://www.facebook.com/Oflash.Corporacion/" target="_black">
                                         <i class="fab fa-facebook-f"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#">
+                                    <a class="nav-link active" href="http://www.twitter.com/Oflash_la" target="_black">
                                         <i class="fab fa-twitter"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#">
+                                    <a class="nav-link active" href="http://www.youtube.com/channel/UC6m6BB2nb3qdW1LypBBcwQQ" target="_black">
                                         <i class="fab fa-youtube"></i>
                                     </a>
                                 </li>
